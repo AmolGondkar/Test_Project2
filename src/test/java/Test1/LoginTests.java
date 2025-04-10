@@ -46,7 +46,7 @@ public class LoginTests {
     }
 
     @Test(dataProvider = "loginData")
-    public void loginTest(String username, String password, String expectedMessage) {
+    public void loginTest(String username, String password, String expectedMessage) throws Exception {
         System.out.println("\n===== Running Login Test Case =====");
         System.out.println("Username: " + username);
         System.out.println("Expected Message: " + expectedMessage);
@@ -82,6 +82,7 @@ public class LoginTests {
         }
 
         System.out.println("==> Test Passed\n");
+        Thread.sleep(1000);
     }
 
     @AfterClass
